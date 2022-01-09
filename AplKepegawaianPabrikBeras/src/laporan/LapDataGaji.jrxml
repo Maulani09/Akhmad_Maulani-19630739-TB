@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fd418035-d7a8-4780-9645-dd3959fe114a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="111"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM gaji;]]>
+	</queryString>
+	<field name="id_gaji" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jabatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gaji_pokok" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bonus" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="potongan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gaji_bersih" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="280" y="21" width="243" height="36" uuid="7cede6e2-5b51-476a-837f-a01f5949f3bb"/>
+				<textElement textAlignment="Center">
+					<font size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Gaji]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="9" width="54" height="20" uuid="b209d190-b0c9-49f9-a82c-7bdbe19b9c80"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ID Gaji]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="9" width="100" height="20" uuid="67eb371d-16e5-4305-ab15-2d8fdf3c0b78"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="205" y="9" width="100" height="20" uuid="75d7ccc0-237b-4080-a86c-2a83f1cb041d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Jabatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="9" width="100" height="20" uuid="ce358690-296d-4c2f-896f-3684bf097b47"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Gaji Pokok]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="9" width="100" height="20" uuid="ec8e5057-b7ef-4f0a-bd0a-1991ebddb904"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Bonus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="561" y="9" width="100" height="20" uuid="1437d5fd-443d-468e-b33d-85d03afda12c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Potongan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="681" y="9" width="100" height="20" uuid="17b1e435-3dfa-4c8e-a33f-48927240a138"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Gaji Bersih]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="13" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="36" y="6" width="54" height="20" uuid="255631c1-8ca3-4c92-ba28-ceb42f07c0b3"/>
+				<textFieldExpression><![CDATA[$F{id_gaji}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="6" width="68" height="20" uuid="95779c35-3c9a-4f3e-a559-fc96d33b2520"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="6" width="68" height="20" uuid="ca2ddcd0-a0d2-44fa-989f-2d40aa846852"/>
+				<textFieldExpression><![CDATA[$F{jabatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="6" width="68" height="20" uuid="0c2afcfc-7b4c-43be-aed1-eae26fd99674"/>
+				<textFieldExpression><![CDATA[$F{gaji_pokok}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="6" width="68" height="20" uuid="fca9fe46-770a-4e6b-920f-0814b6ce27eb"/>
+				<textFieldExpression><![CDATA[$F{bonus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="587" y="6" width="68" height="20" uuid="a4813685-c7f6-41a7-a1e5-f0b8d619f52b"/>
+				<textFieldExpression><![CDATA[$F{potongan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="713" y="6" width="68" height="20" uuid="c08184e9-0baf-455e-bdd9-88f63328c4be"/>
+				<textFieldExpression><![CDATA[$F{gaji_bersih}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

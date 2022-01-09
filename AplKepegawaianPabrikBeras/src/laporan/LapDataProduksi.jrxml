@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cd42de99-3fda-4c0e-ae5c-7002300a20fb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="54"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM `beras`;]]>
+	</queryString>
+	<field name="id_beras" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_beras" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga_beras" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlah_beras" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stok_beras" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status_produksi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="157" y="17" width="410" height="47" uuid="51e2f397-39ce-4609-908e-f4ae2b231163"/>
+				<textElement>
+					<font size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Produksi Beras]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="353" y="9" width="68" height="20" uuid="4ba63ce0-3b9d-48d7-8c27-f2b664b632cc"/>
+				<text><![CDATA[Jumlah Beras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="9" width="87" height="20" uuid="2bb97051-696b-4467-b301-e1cf7328732b"/>
+				<text><![CDATA[Nama Beras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="9" width="60" height="20" uuid="b4c6e8ed-7643-480b-a5c4-30ca475a09d7"/>
+				<text><![CDATA[Stok Beras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="9" width="68" height="20" uuid="7a2d5647-9e3c-4e0a-954b-2f9e993aa0a4"/>
+				<text><![CDATA[Harga Beras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="9" width="61" height="20" uuid="7a7d49d5-7c94-4d30-9753-261e8020cf08"/>
+				<text><![CDATA[ID Produksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="522" y="9" width="80" height="20" uuid="425c38e0-cb4a-42bc-9eb6-5157cf0724ab"/>
+				<text><![CDATA[Status Produksi]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="7" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="79" y="12" width="61" height="20" uuid="c580ef14-1913-4b0d-aee4-002de0d54265"/>
+				<textFieldExpression><![CDATA[$F{id_beras}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="266" y="12" width="68" height="20" uuid="bd0986c2-1fe5-41d0-b309-6d21423f9680"/>
+				<textFieldExpression><![CDATA[$F{harga_beras}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="12" width="68" height="20" uuid="e13c8f5c-1846-43d3-9f69-e68f6e1bc632"/>
+				<textFieldExpression><![CDATA[$F{jumlah_beras}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="157" y="12" width="87" height="20" uuid="2624ada0-8c3b-4ddf-a5ae-3dab8535b02f"/>
+				<textFieldExpression><![CDATA[$F{nama_beras}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="12" width="60" height="20" uuid="a96736da-8b39-4bde-9383-8aee659cb49d"/>
+				<textFieldExpression><![CDATA[$F{stok_beras}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="522" y="12" width="80" height="20" uuid="72d7d2c7-1ef5-4b88-be77-1e6f7b6ffc11"/>
+				<textFieldExpression><![CDATA[$F{status_produksi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
